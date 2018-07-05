@@ -6,11 +6,12 @@ class QuizEnd extends Component {
       <div>
         <p>Thanks for playing!</p>
         <br />
-        <a className='btn btn-primary' href='' onClick={this.handleResetClick.bind(this)} >Reset Quiz</a>
+        <a href='' onClick={this.handleResetClick.bind(this)} >Reset Quiz</a>
       </div>
     )
   }
-  handleResetClick () {
+  handleResetClick (e) {
+    e.preventDefault()
     this.props.resetClickHandler()
   }
 }
